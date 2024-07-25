@@ -60,6 +60,23 @@ img {
     
 }
 
+/*specific image styling and sizing */
+.logo-img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.intro-img {
+    width: 300px;
+    height: auto;
+}
+
+.portfolio-img {
+    width: 200px;
+    height: auto;
+}
+
 /*changes the state when items are focused*/
 
 :focus {
@@ -286,7 +303,14 @@ nav {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+@media (max-width: 600px){
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
 }
 
 .portfolio-item {
