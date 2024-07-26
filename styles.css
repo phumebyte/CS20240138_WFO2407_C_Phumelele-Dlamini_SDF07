@@ -65,6 +65,8 @@ img {
     width: 200px;
     height: auto;
     border-radius: 50%;
+    margin-left: 20px;
+    border: 7px solid var(--cl-accent);
 }
 
 .intro-img {
@@ -161,7 +163,7 @@ h3 {
     cursor: pointer;
     border: none;
     background: none;
-    position: absolute;
+    position: relative;
     top: 1.5rem;
     right: 1.5rem;
     z-index: 10;
@@ -178,7 +180,7 @@ h3 {
 
 .nav-toggle .hamburger::before,
 .nav-toggle .hamburger::after {
-    content: '';
+    content: ' ';
     width: 2rem;
     height: 0.25rem;
     background: var(--cl-dark);
@@ -210,35 +212,36 @@ h3 {
 
 /* Navigation menu */
 .nav {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
     background: var(--cl-light);
-    position: absolute;
-    top: 5rem;
-    right: 1.5rem;
-    width: calc(100% - 3rem);
-    max-width: 300px;
-    border: 1px solid var(--cl-dark);
-    box-shadow: var(--bs);
+    position: relative;
+    width: 100%;
+    border: none;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-top: 0;
 }
 
 .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 100%;
-    text-align: center;
 }
 
 .nav__item {
-    margin: 1rem 0;
+    margin: 0 1em;
 }
 
 .nav__link {
     text-decoration: none;
     color: var(--cl-dark);
-    font-size: var(--fs-body);
+    font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
     transition: color 0.3s ease;
 }
@@ -260,11 +263,32 @@ h3 {
     .nav.open {
         display: flex;
     }
+
+    .nav__list {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start;
+    }
 }
 
-/* header section */
-nav {
-    display: none;
+@media (min-width: 800px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .nav__list {
+        justify-content: space-between;
+    }
+
+    .nav__item {
+        margin: 0 1.5em;
+    }
 }
 
 /* intro section */
@@ -274,6 +298,7 @@ nav {
 }
 
 .intro-img {
+    display: inline;
     box-shadow: var(--bs);
 }
 
@@ -294,12 +319,14 @@ nav {
     .intro{
         display: grid;
         width: min-content;
+        margin: 0;
         grid-column-gap: 1em;
         grid-template-areas: "img title"  "img subtitle" ;
         grid-template-columns: min-content max-content;
     }
 
     .intro-img {
+        display: inline;
         grid-area: img;
         min-width: 250px;
     }
