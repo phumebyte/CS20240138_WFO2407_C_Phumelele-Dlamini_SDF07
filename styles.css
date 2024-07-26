@@ -327,6 +327,12 @@ nav {
     text-align: center;
 }
 
+.portfolio-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section__subtitle--work {
     color: var(--cl-accent);
     font-weight: var(--fw-bold);
@@ -366,7 +372,7 @@ nav {
     z-index: 2;
 }
 
-.portfolio-img:hover
+.portfolio-img:hover .portfolio-img,
 .portfolio-item:focus .portfolio-img {
     transform: scale(1.2);
     opacity: .75;
