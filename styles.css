@@ -68,6 +68,7 @@ img {
 }
 
 .intro-img {
+    display: inline;
     width: 300px;
     height: auto;
 }
@@ -168,6 +169,19 @@ nav {
     box-shadow: var(--bs);
 }
 
+.section__subtitle--intro {
+    font-weight: var(--fw-regular);
+    background: var(--cl-accent);
+    padding: .25em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+    display: inline-block;
+}
+
 @media (min-width: 600px){
     .intro{
         display: grid;
@@ -253,6 +267,19 @@ nav {
     box-shadow: var(--bs);
 }
 
+.section__subtitle--about {
+    font-weight: var(--fw-regular);
+    background: var(--cl-accent);
+    padding: .25em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+    text-align: left;
+    position: relative;
+    right: -1.5em;
+    width: calc(100% + 1.5em);
+    display: inline-block;
+}
+
 @media (min-width: 600px){
     .About {
         display: grid;
@@ -271,12 +298,17 @@ nav {
     }
 
     .section__subtitle--about {
-        grid-column: 1/-1 ;
-        grid-row: 2;
+        font-weight: var(--fw-regular);
+        background: var(--cl-accent);
+        padding: .25em;
+        font-family: var(--ff-secondary);
+        margin-bottom: 1em;
+        text-align: left;
         position: relative;
-        left: -2me calc(100% + 2em);
-        padding-left: 2em;
-        padding-right: calc(100% + 4em);
+        right: -1.5em;
+        width: auto; /* Auto width to prevent stacking */
+        display: inline-block;
+        white-space: nowrap; /* Prevent line breaks */
     }
 
     .about-me-img {
@@ -316,9 +348,15 @@ nav {
 .portfolio-item {
     background: var(--cl-accent);
     overflow: hidden;
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+    text-align: center; /* Center the content */
+    padding: 1em;
 }
 
 .portfolio-img {
+    display: inline;
+    width: 100%;
+    height: auto;
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
 }
@@ -341,6 +379,7 @@ nav {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
+    list-style: none;
 }
 
 .footer a {
