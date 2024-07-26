@@ -208,6 +208,45 @@ h3 {
     transform: rotate(90deg) translateX(0.5rem);
 }
 
+/* Navigation menu */
+.nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cl-light);
+    position: absolute;
+    top: 5rem;
+    right: 1.5rem;
+    width: calc(100% - 3rem);
+    max-width: 300px;
+    border: 1px solid var(--cl-dark);
+    box-shadow: var(--bs);
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav__item {
+    margin: 1rem 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--cl-dark);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--cl-accent);
+}
+
 /* header section */
 nav {
     display: none;
