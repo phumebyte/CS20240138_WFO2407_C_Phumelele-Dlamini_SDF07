@@ -154,6 +154,46 @@ h3 {
     margin-bottom: 1em;
 }
 
+/* Hamburger menu and nav links */
+/* Style for the hamburger button */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--cl-dark);
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--cl-dark);
+    position: absolute;
+    transition: all 0.3s linear;
+}
+
+.nav-toggle .hamburger::before {
+    transform: translateY(-0.5rem);
+}
+
+.nav-toggle .hamburger::after {
+    transform: translateY(0.5rem);
+}
+
 /* header section */
 nav {
     display: none;
