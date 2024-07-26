@@ -247,6 +247,21 @@ h3 {
     color: var(--cl-accent);
 }
 
+/* Media query for navigation menu and toggle button for small screens */
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+}
+
 /* header section */
 nav {
     display: none;
