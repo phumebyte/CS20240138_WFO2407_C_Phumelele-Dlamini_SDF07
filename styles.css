@@ -466,12 +466,7 @@ h3 {
     background-color: var(--cl-dark);
     color: var(--cl-light);
     text-align: center;
-}
-
-.portfolio-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 2em 0;
 }
 
 .section__subtitle--work {
@@ -484,6 +479,8 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 @media (max-width: 600px){
@@ -506,6 +503,11 @@ h3 {
     height: auto;
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
+}
+
+.portfolio-item:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .portfolio-item:focus {
