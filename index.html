@@ -81,7 +81,7 @@
                     Balancing my studies with personal life, I enjoy painting and regularly connecting with family and friends. I believe my creativity and unique approach to programming set me apart, and I've overcome challenges such as debugging a cat Instagram profile under time pressure. I emphasize the importance of community and collaboration in development, believing that sharing ideas and feedback drives innovation. Motivated by my career goals, I advise beginners- such as myself, to practice extensively, focus on implementation, and develop muscle memory for coding tasks.
                 </p>
            </div>
-           <img class="about-me-img" src="" alt="Coding image">
+           <img class="about-me-img" src="phumelele's-workspace.jpeg" alt="Coding image">
         </section>
 
         <!--Work Section-->
@@ -124,5 +124,18 @@
                 <li class="social-list__item"> <a class="social-list__link" href="#"><i class="fab fa-linkedin"></i></a> </li>
             </ul>
         </footer>
+        <!--Javascript to make burger functional (stack overflow)-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const navToggle = document.querySelector('.nav-toggle');
+                const nav = document.querySelector('.nav');
+    
+                navToggle.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                    navToggle.classList.toggle('open');
+                });
+            });
+        </script>
+
     </body>
 </html>

@@ -78,6 +78,12 @@ img {
 .portfolio-img {
     width: 200px;
     height: auto;
+    display: inline;
+}
+
+.about-me-img {
+    width: 250px;
+    height: auto;
 }
 
 /*changes the state when items are focused*/
