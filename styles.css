@@ -194,6 +194,20 @@ h3 {
     transform: translateY(0.5rem);
 }
 
+
+/* Rotate lines to form an X when menu is open */
+.nav-toggle.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.nav-toggle.open .hamburger::before {
+    transform: rotate(90deg) translateX(-0.5rem);
+}
+
+.nav-toggle.open .hamburger::after {
+    transform: rotate(90deg) translateX(0.5rem);
+}
+
 /* header section */
 nav {
     display: none;
