@@ -55,25 +55,24 @@ section {
 img {
     display: block;
     max-width: 100%;
-    position: relative;
-    z-index: 2;
-    
 }
 
 /*specific image styling and sizing */
 .logo-img {
-    width: 200px;
+    width: 100px;
     height: auto;
     border-radius: 50%;
-    margin-left: 20px;
     border: 7px solid var(--cl-accent);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .intro-img {
-    display: inline;
     width: 300px;
     height: auto;
-}
+} 
 
 .portfolio-img {
     width: 200px;
@@ -159,7 +158,9 @@ h3 {
     background: var(--cl-accent);
     padding: .25em;
     font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
     margin-bottom: 1em;
+    color: white;
 }
 
 /* Hamburger menu and nav links */
@@ -304,50 +305,38 @@ h3 {
 }
 
 .intro-img {
-    display: inline;
     box-shadow: var(--bs);
 }
 
 .section__subtitle--intro {
-    font-weight: var(--fw-regular);
-    background: var(--cl-accent);
-    padding: .25em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);
     display: inline-block;
 }
-
 @media (min-width: 600px){
     .intro{
         display: grid;
         width: min-content;
-        margin: 0;
+        margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: "img title"  "img subtitle" ;
         grid-template-columns: min-content max-content;
     }
 
-    .intro-img {
-        display: inline;
+    .intro__img {
         grid-area: img;
         min-width: 250px;
-    }
-
-    .section__subtitle--intro {
-        align-self: start;
-        grid-column: -1/1;
-        grid-row: 2;
-        text-align: right;
         position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
-
-        display: inline-block;
+        z-index: 2;
     }
+    
+    .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+}
 }
 
 /* what i do section */
