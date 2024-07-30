@@ -422,43 +422,35 @@ header {
     display: inline-block;
 }
 
-@media (min-width: 600px){
-    .About {
+@media (min-width: 600px) {
+    .about-me {
         display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas: "title img" "subtitle img" "text img";
-        grid-column-gap: 2em;
+        width: min-content;
+        margin: 0 auto;
+        grid-template-areas: 
+            "title"
+            "subtitle";
+        grid-template-columns: 1fr;
     }
-
-    .section__subtitle--about,
-    .section__title--about {
-        grid-column: 1;
+    
+    .about-me__img {
+        margin-top: 1em;
+        justify-self: center;
     }
-
-    .section__title--about {
-        grid-area: title;
-    }
-
+    
     .section__subtitle--about {
-        font-weight: var(--fw-regular);
-        background: var(--cl-accent);
-        padding: .25em;
-        font-family: var(--ff-secondary);
-        margin-bottom: 1em;
+        justify-self: start;
+        grid-column: -2 / 1;
+        grid-row: 2;
         text-align: center;
         position: relative;
-        right: -1.5em;
-        width: auto; /* Auto width to prevent stacking */
-        display: inline-block;
-        white-space: nowrap; /* Prevent line breaks */
+        width: 100%; 
     }
-        .about-me-img {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }
-        
+    
+    .section__title--about {
+        grid-area: title;
+        justify-self: start;
+    } 
 }
 
  /* portfolio section */
