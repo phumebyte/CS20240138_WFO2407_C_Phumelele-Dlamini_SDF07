@@ -81,7 +81,7 @@ img {
 }
 
 .about-me-img {
-    width: 250px;
+    width: 300px;
     height: auto;
 }
 
@@ -90,6 +90,10 @@ img {
 :focus {
     outline: 3px solid var(--cl-accent);
     outline-offset: 3px;
+}
+
+strong {
+    font-weight: var(--fw-bold);
 }
 
 /*button styling*/
@@ -161,6 +165,11 @@ h3 {
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
     color: white;
+}
+
+header {
+    margin: 0;
+    padding: 0;
 }
 
 /* Hamburger menu and nav links */
@@ -302,17 +311,21 @@ h3 {
 
 .intro {
     position: relative;
+    margin: 0;
+    padding: 0 2em;
 }
 
 .intro-img {
     box-shadow: var(--bs);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section__subtitle--intro {
     display: inline-block;
 }
 @media (min-width: 600px){
-    .intro{
+    .intro {
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -332,10 +345,9 @@ h3 {
     align-self: start;
     grid-column: -1 / 1;
     grid-row: 2;
-    text-align: right;
+    text-align: center;
     position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);
+    width: 100%;
 }
 }
 
@@ -433,20 +445,20 @@ h3 {
         padding: .25em;
         font-family: var(--ff-secondary);
         margin-bottom: 1em;
-        text-align: left;
+        text-align: center;
         position: relative;
         right: -1.5em;
         width: auto; /* Auto width to prevent stacking */
         display: inline-block;
         white-space: nowrap; /* Prevent line breaks */
     }
-
-    .about-me-img {
-        grid-row: 1/-1;
-        grid-column: 2;
+        .about-me-img {
+        grid-area: img;
+        min-width: 250px;
         position: relative;
         z-index: 2;
     }
+        
 }
 
  /* portfolio section */
